@@ -8,7 +8,7 @@ module "iam_roles" {
 
 
 provider "aws" {
-  region = "${region}"
+  region = "ap-southeast-2"
 }
 
 
