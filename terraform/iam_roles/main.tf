@@ -8,8 +8,8 @@ module "iam_roles" {
 
 terraform {
   backend "s3" {
-    bucket = "${s3_backend_bucket}"
-    key    = "${s3_backend_bucket_path}"
-    region = "${region}"
+    bucket = "9328-test-bucket"
+    key    = "jenkins-poc-stack/terraform.tfstate"
+    region = "ap-southeast-2"
   }
 }
