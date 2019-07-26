@@ -1,4 +1,4 @@
-#------------iam_r/main.tf---------
+#------------role/main.tf---------
 
 resource "aws_iam_role" "bastion_iam_role" {
   name               = "${var.bastion_iam_role_name}"

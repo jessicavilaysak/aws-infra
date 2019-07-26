@@ -1,12 +1,14 @@
 {
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Action": "sts:AssumeRole",
-        "Principal": {
-          "Service": "ec2.amazonaws.com"
-        },
-        "Effect": "Allow"
-      }
-    ]
-  }
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::024487289407:role/Full-Admin-Access"
+        ]
+      },
+      "Effect": "Allow"
+    }
+  ]
+}
