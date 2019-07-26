@@ -34,7 +34,7 @@ resource "aws_iam_instance_profile" "jenkinsmaster_iam_profile" {
 
 resource "aws_iam_role_policy" "jenkinsmaster_policy" {
   name = "jenkinsmaster_policy"
-  role = "${aws_iam_role.bjenkinsmaster_iam_role.id}"
+  role = "${aws_iam_role.jenkinsmaster_iam_role.id}"
   policy = "${file("${path.module}/files/jenkinsmaster_role_policy.json")}"
 }
 
