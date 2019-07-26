@@ -6,7 +6,8 @@ region = "ap-southeast-2"
 
 bastion_iam_role_name = "BastionInstanceRole"
 bastion_iam_profile_name = "BastionInstanceProfile"
-
+jenkinsmaster_iam_role_name = "JenkinsMasterInstanceRole"
+jenkinsmaster_iam_profile_name = "JenkinsMasterInstanceProfile"
 
 
 

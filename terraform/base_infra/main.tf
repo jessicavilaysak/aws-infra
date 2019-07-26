@@ -4,6 +4,8 @@ module "roles" {
   source             = "./roles"
   bastion_iam_role_name     = "${var.bastion_iam_role_name}"
   bastion_iam_profile_name  = "${var.bastion_iam_profile_name}"
+  jenkinsmaster_iam_role_name = "${var.jenkinsmaster_iam_role_name}"
+  jenkinsmaster_iam_profile_name = "${var.jenkinsmaster_iam_profile_name}"
 }
 
 
