@@ -6,6 +6,12 @@ module "iam_roles" {
   bastion_iam_profile_name  = "${var.bastion_iam_profile_name}"
 }
 
+
+provider "aws" {
+  region = "${region}"
+}
+
+
 terraform {
   backend "s3" {
     bucket = "9328-test-bucket"
@@ -13,3 +19,5 @@ terraform {
     region = "ap-southeast-2"
   }
 }
+
+
