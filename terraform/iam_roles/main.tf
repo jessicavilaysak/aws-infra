@@ -1,7 +1,7 @@
 #------------------root/main.tf----------------------
 #----------------security module ---------------------
-module "iam_roles" {
-  source             = "./iam_roles"
+module "roles" {
+  source             = "./roles"
   bastion_iam_role_name     = "${var.bastion_iam_role_name}"
   bastion_iam_profile_name  = "${var.bastion_iam_profile_name}"
 }

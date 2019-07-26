@@ -1,1 +1,9 @@
+
+## Ignore mac auto-generated files
 .DS_Store
+
+
+## Ignore any terraform auto-generated files
+.terraform
+
+
