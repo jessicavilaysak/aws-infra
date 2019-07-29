@@ -20,4 +20,8 @@ output "JENKINS_LB_SG" {
   value = "${module.security_groups.jenkins_lb_sg}"
 }
 
+output "BASTION_INSTANCE" {
+  value = "${module.computing.bastion_instance}"
+}
+
 

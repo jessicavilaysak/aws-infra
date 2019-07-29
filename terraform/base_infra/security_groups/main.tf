@@ -2,6 +2,7 @@
 
 ###
 # We will first create the bastion security group
+# 
 ###
 
 resource "aws_security_group" "bastion_tooling_sg" {

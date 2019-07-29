@@ -4,6 +4,7 @@ variable "tools_vpc_id" {}
 variable "ssh_port" {}
 variable "http_port" {}
 variable "https_port" {}
+variable "subnet_ids" {}
 
 
 #--------------- Tag vars to be used
@@ -32,3 +33,13 @@ variable "jenkins_tooling_sg_name" {}
 variable "jenkins_tooling_lb_sg_name" {}
 variable "all_inbound_cidrs" {}
 variable "all_outbound_cidrs" {}
+
+#----------- Vars for module 'computing'
+variable "ami_filter_name" {}
+variable "ami_filter_pattern_bastion" {}
+variable "ami_filter_pattern_jenkins" {}
+variable "bastion_instance_type" {}
+variable "bastion_iam_profile" {}
+variable "key_pair" {}
+
+

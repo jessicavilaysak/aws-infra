@@ -21,6 +21,13 @@ module "security_groups" {
   https_port = "${var.https_port}"
 }
 
+module "computing" {
+  source = "./computing"
+  bastion_iam_profile = "${module.roles.bastion_iam_profile_id}"
+  bastion_instance_sg = ["${module.security_groups.bastion_sg_id}"]
+  subnet_ids = "${var.subnet_ids}"
+}
+
 
 provider "aws" {
   region = "ap-southeast-2"

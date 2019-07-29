@@ -28,7 +28,11 @@ tools_vpc_id = "vpc-99b0e5fe"
 ssh_port = "22"
 http_port = "8080"
 https_port = "8443"
-
+subnet_ids = [
+    "subnet-2637196f",
+    "subnet-a9fac7ce",
+    "subnet-231bb77b"
+]
 
 
 #---------- Vars for module 'roles'
@@ -51,3 +55,11 @@ jenkins_tooling_lb_sg_name = "ToolingJenkinsLoadBalancerSG"
 all_inbound_cidrs = ["10.0.0.0/8"]
 all_outbound_cidrs = ["0.0.0.0/0"]
 
+
+#----------- Vars for module 'computing'
+lb_cert_arn = "arn:aws:iam::024487289407:server-certificate/jess-test-jenkins"
+ami_filter_name = "name"
+ami_filter_pattern_bastion = "amzn2-ami-hvm-*"
+ami_filter_pattern_jenkins = "amzn2-ami-hvm-*"
+bastion_instance_type = "t2.micro"
+key_pair = "jess-root-user"
