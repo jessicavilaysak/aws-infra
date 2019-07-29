@@ -14,6 +14,7 @@ module "security_groups" {
   tools_vpc_id = "${var.tools_vpc_id}"
   bastion_tooling_sg_name = "${var.bastion_tooling_sg_name}"
   jenkins_tooling_sg_name = "${var.jenkins_tooling_sg_name}"
+  jenkins_tooling_lb_sg_name = "${var.jenkins_tooling_lb_sg_name}"
   all_inbound_cidrs = "${var.all_inbound_cidrs}"
   all_outbound_cidrs = "${var.all_outbound_cidrs}"
   http_port = "${var.http_port}"
