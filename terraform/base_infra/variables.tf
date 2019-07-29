@@ -42,7 +42,6 @@ variable "ami_filter_name" {}
 variable "ami_filter_pattern_bastion" {}
 variable "ami_filter_pattern_jenkins" {}
 variable "bastion_instance_type" {}
-variable "bastion_iam_profile" {}
 variable "key_pair" {}
 
 
