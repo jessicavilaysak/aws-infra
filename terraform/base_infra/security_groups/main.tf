@@ -17,22 +17,6 @@ resource "aws_security_group" "bastion_tooling_sg" {
     cidr_blocks     = "${var.all_inbound_cidrs}"
   }
 
-  #Inbound Http
-  ingress {
-    from_port   = "${var.http_port}"
-    to_port     = "${var.http_port}"
-    protocol    = "tcp"
-    cidr_blocks = "${var.all_inbound_cidrs}"
-  }
-
-  #Inbound Https
-  ingress {
-    from_port   = "${var.https_port}"
-    to_port     = "${var.https_port}"
-    protocol    = "tcp"
-    cidr_blocks = "${var.all_inbound_cidrs}"
-  }
-
   #All outbound traffic should be allowed
   egress {
     from_port   = 0
