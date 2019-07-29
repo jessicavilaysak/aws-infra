@@ -1,10 +1,14 @@
 #-------------------root/outputs.tf file ------------------
 
-output "bastion_iam_profile_id" {
-  value = "${aws_iam_instance_profile.bastion_iam_profile}"
+output "bastion_sg" {
+  value = "${aws_security_group.bastion_tooling_sg}"
 }
 
-output "jenkinsmaster_iam_profile_id" {
-  value = "${aws_iam_instance_profile.jenkinsmaster_iam_profile}"
+output "jenkins_sg" {
+  value = "${aws_security_group.jenkins_tooling_sg}"
+}
+
+output "jenkins_lb_sg"{
+  value = "${aws_security_group.jenkins_tooling_lb_sg}"
 }
 
