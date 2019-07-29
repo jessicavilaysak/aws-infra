@@ -17,3 +17,6 @@ variable "jenkins_lb_sg" {}
 variable "lb_cert_arn" {}
 variable "jenkins_instance_type" {}
 variable "jenkins_instance_sg" {}
+variable "jenkins_iam_profile" {}
+variable "http_port" {}
+variable "https_port" {}
