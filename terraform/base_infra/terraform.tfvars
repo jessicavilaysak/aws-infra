@@ -33,7 +33,7 @@ subnet_ids = [
     "subnet-a9fac7ce",
     "subnet-231bb77b"
 ]
-subnet_id = "${subnet_ids[0]}"
+subnet_id = "subnet-2637196f"
 ami_owner_amazon = "amazon"
 
 
