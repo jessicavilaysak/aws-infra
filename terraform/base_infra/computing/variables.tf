@@ -1,3 +1,5 @@
+
+variable "ami_owner_amazon" {}
 variable "ami_filter_name" {}
 variable "ami_filter_pattern_jenkins" {}
 variable "ami_filter_pattern_bastion" {}

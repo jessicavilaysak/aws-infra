@@ -4,7 +4,7 @@
 data "aws_ami" "jenkins_ami" {
   most_recent = true
 
-  #owners = ["${var.ami_owner}"]
+  owners = ["${var.ami_owner_amazon}"]
 
   filter {
     name   = "${var.ami_filter_name}"
@@ -15,7 +15,7 @@ data "aws_ami" "jenkins_ami" {
 data "aws_ami" "bastion_ami" {
   most_recent = true
 
-  #owners = ["${var.ami_owner}"]
+  owners = ["${var.ami_owner_amazon}"]
 
   filter {
     name   = "${var.ami_filter_name}"

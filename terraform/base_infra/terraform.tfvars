@@ -33,6 +33,7 @@ subnet_ids = [
     "subnet-a9fac7ce",
     "subnet-231bb77b"
 ]
+ami_owner_amazon = "amazon"
 
 
 #---------- Vars for module 'roles'

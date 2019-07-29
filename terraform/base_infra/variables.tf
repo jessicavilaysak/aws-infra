@@ -5,6 +5,7 @@ variable "ssh_port" {}
 variable "http_port" {}
 variable "https_port" {}
 variable "subnet_ids" {}
+variable "ami_owner_amazon" {}
 
 
 #--------------- Tag vars to be used

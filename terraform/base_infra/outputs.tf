@@ -9,15 +9,15 @@ output "JENKINSMASTER_IAM_PROFILE" {
 }
 
 output "BASTION_SG" {
-  value = "${module.security_groups.bastion_sg}"
+  value = "${module.security_groups.bastion_sg_id}"
 }
 
 output "JENKINS_SG" {
-  value = "${module.security_groups.jenkins_sg}"
+  value = "${module.security_groups.jenkins_sg_id}"
 }
 
 output "JENKINS_LB_SG" {
-  value = "${module.security_groups.jenkins_lb_sg}"
+  value = "${module.security_groups.jenkins_lb_sg_id}"
 }
 
 output "BASTION_INSTANCE" {
