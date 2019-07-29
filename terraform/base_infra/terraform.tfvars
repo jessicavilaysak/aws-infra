@@ -47,6 +47,7 @@ jenkinsmaster_iam_profile_name = "JenkinsMasterInstanceProfile"
 #---------- Vars for module 'security_groups'
 bastion_tooling_sg_name = "ToolingBastionSecurityGroup"
 jenkins_tooling_sg_name = "ToolingJenkinsSecurityGroup"
+jenkins_tooling_lb_sg_name = "ToolingJenkinsLoadBalancerSG"
 all_inbound_cidrs = ["10.0.0.0/8"]
 all_outbound_cidrs = ["0.0.0.0/0"]
 

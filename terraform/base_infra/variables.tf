@@ -29,5 +29,6 @@ variable "jenkinsmaster_iam_profile_name" {}
 #------------ Vars for module 'security_groups'
 variable "bastion_tooling_sg_name" {}
 variable "jenkins_tooling_sg_name" {}
+variable "jenkins_tooling_lb_sg_name" {}
 variable "all_inbound_cidrs" {}
 variable "all_outbound_cidrs" {}
