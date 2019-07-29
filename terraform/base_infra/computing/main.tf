@@ -102,7 +102,7 @@ resource "aws_lb_target_group" "jenkins_lb_https_target_group" {
 ## The load balancer resource
 resource "aws_lb" "jenkins_lb" {
   security_groups    = ["${var.jenkins_lb_sg}"]
-  internal           = true
+  internal           = false
   load_balancer_type = "application"
   subnets            = "${var.subnet_ids}"
 
