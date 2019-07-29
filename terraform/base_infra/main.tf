@@ -41,6 +41,8 @@ module "computing" {
   jenkins_instance_type = "${var.jenkins_instance_type}"
   jenkins_iam_profile = "${module.roles.jenkins_iam_profile_id}"
   jenkins_instance_sg = "${module.security_groups.jenkins_sg_id}"
+  jenkins_repo_download_link = "${var.jenkins_repo_download_link}"
+  jenkins_repo_import_link = "${var.jenkins_repo_import_link}"
 }
 
 

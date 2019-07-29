@@ -44,5 +44,7 @@ variable "ami_filter_pattern_jenkins" {}
 variable "bastion_instance_type" {}
 variable "key_pair" {}
 variable "jenkins_instance_type" {}
+variable "jenkins_repo_download_link" {}
+variable "jenkins_repo_import_link" {}
 
 

@@ -1,5 +1,12 @@
 #------------computing/main.tf---------
 
+data "template_file" "jenkins_launch_config_userdata" {
+  template = "${file("${path.module}/files/jenkins_launch_config_userdata.tpl")}"
+  vars = {
+    jenkins_repo_download_link = "${var.jenkins_repo_download_link}"
+    jenkins_repo_import_link = "${var.jenkins_repo_import_link}"
+  }
+}
 
 data "aws_ami" "jenkins_ami" {
   most_recent = true
@@ -215,8 +222,7 @@ resource "aws_launch_configuration" "jenkins_launch_config" {
   key_name             = "${var.key_pair}"
   security_groups      = ["${var.jenkins_instance_sg}"]
 
-  #note that above is created from the networking module, so its output will be passed as param to this module
-  #user_data = "${data.template_file.user-init.*.rendered[0]}"
+  user_data = "${data.template_file.user-init.*.rendered[0]}"
 
   lifecycle {
     create_before_destroy = true

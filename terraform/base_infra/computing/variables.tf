@@ -20,6 +20,8 @@ variable "subnet_id" {}
 variable "subnet_ids" {}
 variable "lb_cert_arn" {}
 variable "jenkins_instance_type" {}
+variable "jenkins_repo_download_link" {}
+variable "jenkins_repo_import_link" {}
 
 
 ## Referenced from other modules
@@ -29,3 +31,4 @@ variable "jenkins_instance_sg" {}
 variable "jenkins_iam_profile" {}
 variable "bastion_instance_sg" {}
 variable "bastion_iam_profile" {}
+
