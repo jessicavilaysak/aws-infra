@@ -40,7 +40,7 @@ resource "aws_instance" "bastion_instance" {
   #   LDAPAuthDomain = "${var.tags_ldap_domain}"
   # }
 
-  iam_instance_profile = "${module.roles.bastion_iam_profile_id}"
+  iam_instance_profile = "${var.bastion_iam_profile}"
 
   key_name               = "${var.key_pair}"
   vpc_security_group_ids = ["${var.bastion_instance_sg}"]
