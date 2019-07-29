@@ -4,8 +4,8 @@ output "BASTION_IAM_PROFILE" {
   value = "${module.roles.bastion_iam_profile_id}"
 }
 
-output "JENKINSMASTER_IAM_PROFILE" {
-  value = "${module.roles.jenkinsmaster_iam_profile_id}"
+output "JENKINS_IAM_PROFILE" {
+  value = "${module.roles.jenkins_iam_profile_id}"
 }
 
 output "BASTION_SG" {
