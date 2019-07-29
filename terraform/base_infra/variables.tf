@@ -5,6 +5,7 @@ variable "ssh_port" {}
 variable "http_port" {}
 variable "https_port" {}
 variable "subnet_ids" {}
+variable "subnet_id" {}
 variable "ami_owner_amazon" {}
 
 
@@ -36,6 +37,7 @@ variable "all_inbound_cidrs" {}
 variable "all_outbound_cidrs" {}
 
 #----------- Vars for module 'computing'
+variable "lb_cert_arn" {}
 variable "ami_filter_name" {}
 variable "ami_filter_pattern_bastion" {}
 variable "ami_filter_pattern_jenkins" {}

@@ -44,7 +44,7 @@ resource "aws_instance" "bastion_instance" {
 
   key_name               = "${var.key_pair}"
   vpc_security_group_ids = ["${var.bastion_instance_sg}"]
-  subnet_id              = "${var.subnet_ids}"
+  subnet_id              = "${var.subnet_id}"
 
   #note that above is created from the networking module, so its output will be passed as param to this module
   #user_data = "${data.template_file.user-init.*.rendered[0]}"

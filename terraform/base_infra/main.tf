@@ -30,7 +30,7 @@ module "computing" {
   bastion_instance_type = "${var.bastion_instance_type}"
   bastion_instance_sg = ["${module.security_groups.bastion_sg_id}"]
   key_pair = "${var.key_pair}"
-  subnet_ids = "${var.subnet_ids}"
+  subnet_id = "${var.subnet_id}"
   ami_owner_amazon = "${var.ami_owner_amazon}"
 }
 
