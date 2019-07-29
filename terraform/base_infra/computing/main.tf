@@ -222,7 +222,7 @@ resource "aws_launch_configuration" "jenkins_launch_config" {
   key_name             = "${var.key_pair}"
   security_groups      = ["${var.jenkins_instance_sg}"]
 
-  user_data = "${data.template_file.user-init.*.rendered[0]}"
+  user_data = "${data.template_file.jenkins_launch_config_userdata.rendered}"
 
   lifecycle {
     create_before_destroy = true
