@@ -9,7 +9,7 @@ export no_proxy=$no_proxy,169.254.169.254,pkg.jenkins-ci.org,*.ap-southeast-2.co
 export NO_PROXY=$no_proxy,169.254.169.254,pkg.jenkins-ci.org,*.ap-southeast-2.compute.internal,*.ap-southeast-2.compute.internal
 echo "proxy=http://forwardproxy:3128" >> /etc/yum.conf
 echo "proxy=http://forwardproxy:3128" >> /etc/profile
-source /etc/profile.d/proxy.sh
+#source /etc/profile.d/proxy.sh
 
 yum install jq -y
 sudo -E yum install java-1.8.0-openjdk-devel -y
