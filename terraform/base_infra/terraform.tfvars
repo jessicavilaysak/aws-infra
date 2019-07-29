@@ -61,7 +61,7 @@ all_outbound_cidrs = ["0.0.0.0/0"]
 #----------- Vars for module 'computing'
 lb_cert_arn = "arn:aws:iam::024487289407:server-certificate/jess-test-jenkins"
 ami_filter_name = "name"
-ami_filter_pattern_bastion = "amzn2-ami-hvm-*"
-ami_filter_pattern_jenkins = "amzn2-ami-hvm-*"
+ami_filter_pattern_bastion = "amzn2-ami-hvm-*-x86_64-gp2"
+ami_filter_pattern_jenkins = "amzn2-ami-hvm-*-x86_64-gp2"
 bastion_instance_type = "t2.micro"
 key_pair = "jess-root-user"
