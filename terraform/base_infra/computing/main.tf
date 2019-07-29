@@ -210,7 +210,6 @@ resource "aws_autoscaling_group" "jenkins_asg" {
 
 resource "aws_launch_configuration" "jenkins_launch_config" {
   instance_type        = "${var.jenkins_instance_type}"
-  image_id             = "${data.aws_ami.server_ami_dev.id}"
   image_id = "${data.aws_ami.jenkins_ami.id}"
   iam_instance_profile = "${var.jenkins_iam_profile}"
   key_name             = "${var.key_pair}"
