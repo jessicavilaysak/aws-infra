@@ -24,8 +24,8 @@ output "BASTION_INSTANCE" {
   value = "${module.computing.bastion_instance}"
 }
 
-output "JENKINS_ASG" {
-  value = "${module.computing.jenkins_asg}"
+output "JENKINS_LOAD_BALANCER" {
+  value = "${module.computing.jenkins_load_balancer}"
 }
 
 
