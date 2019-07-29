@@ -11,7 +11,7 @@ variable "bastion_iam_profile" {}
 variable "key_pair" {}
 
 variable "subnet_id" {}
-variable "subnet_ids"{}
+variable "subnet_ids" {}
 variable "bastion_instance_sg" {}
 variable "jenkins_lb_sg" {}
 variable "lb_cert_arn" {}
