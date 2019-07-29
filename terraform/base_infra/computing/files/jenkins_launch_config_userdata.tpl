@@ -13,6 +13,6 @@ sudo -E yum install httpd -y
 ### Installing jenkins
 #############################################################################################################
 wget -O /etc/yum.repos.d/jenkins.repo "${jenkins_repo_download_link}"
-rpm --import "${jenkins_repo_import_link}
+rpm --import "${jenkins_repo_import_link}"
 yum install jenkins -y
 echo "proxy=http://forwardproxy:3128" >> /etc/yum.repos.d/jenkins.repo
