@@ -9,5 +9,5 @@ variable "bastion_instance_type" {}
 variable "bastion_iam_profile" {}
 variable "key_pair" {}
 
-variable "subnet_ids" {}
+variable "subnet_id" {}
 variable "bastion_instance_sg" {}
