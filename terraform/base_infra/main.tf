@@ -23,8 +23,13 @@ module "security_groups" {
 
 module "computing" {
   source = "./computing"
+  ami_filter_name = "${var.ami_filter_name}"
+  ami_filter_pattern_jenkins = "${var.ami_filter_pattern_jenkins}"
+  ami_filter_pattern_bastion = "${var.ami_filter_pattern_bastion}"
   bastion_iam_profile = "${module.roles.bastion_iam_profile_id}"
+  bastion_instance_type = "${var.bastion_instance_type}"
   bastion_instance_sg = ["${module.security_groups.bastion_sg_id}"]
+  key_pair = "${var.key_pair}"
   subnet_ids = "${var.subnet_ids}"
 }
 

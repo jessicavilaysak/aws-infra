@@ -8,3 +8,4 @@ variable "bastion_iam_profile" {}
 variable "key_pair" {}
 
 variable "subnet_ids" {}
+variable "bastion_instance_sg" {}
