@@ -32,6 +32,13 @@ module "computing" {
   key_pair = "${var.key_pair}"
   subnet_id = "${var.subnet_id}"
   ami_owner_amazon = "${var.ami_owner_amazon}"
+  jenkins_lb_sg = "${module.security_groups.jenkins_lb_sg_id}"
+  https_port = "${var.https_port}"
+  http_port = "${var.http_port}"
+  lb_cert_arn = "${var.lb_cert_arn}"
+  jenkins_instance_type = "${var.jenkins_instance_type}"
+  jenkins_iam_profile = "${module.roles.jenkins_iam_profile_id}"
+  jenkins_instance_sg = "${module.security_groups.jenkins_sg_id}"
 }
 
 
