@@ -52,5 +52,6 @@ variable "jenkins_ssh_folder_path" {}
 
 #----------- Vars for module 'storage'
 variable "jenkins_bucket_name" {}
+variable "current_base_jenkins_home_filename" {}
 
 

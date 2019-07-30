@@ -75,7 +75,7 @@ jenkins_ssh_folder_path = "/var/lib/jenkins/.ssh"
 
 #----------- Vars for module 'storage'
 jenkins_bucket_name="hawks-jenkins-sync-bucket"
-
+current_base_jenkins_home_filename="base_jenkins_home_2019_07_31.zip"
 
 
 
