@@ -21,6 +21,7 @@ service jenkins start
 #############################################################################################################
 ### Set up git connectivity
 #############################################################################################################
+echo "${ssm_github_priv_key}"
 priv_key_json=$(aws ssm get-parameter --with-decryption --name "${ssm_github_priv_key}")
 priv_key_val=$(jq -r '.Parameter.Value' <<< "$priv_key_json")
 echo $priv_key_val > "${jenkins_ssh_folder_path}/id_rsa"
@@ -28,6 +29,7 @@ echo $priv_key_val > "${jenkins_ssh_folder_path}/id_rsa"
 chmod 600 "${jenkins_ssh_folder_path}/id_rsa"
 chown jenkins:jenkins "${jenkins_ssh_folder_path}/id_rsa"
 
+echo "${ssm_github_pub_key}"
 pub_key_json=$(aws ssm get-parameter --with-decryption --name "${ssm_github_pub_key}")
 pub_key_val=$(jq -r '.Parameter.Value' <<< "$pub_key_json")
 echo $pub_key_val > "${jenkins_ssh_folder_path}/id_rsa.pub"
