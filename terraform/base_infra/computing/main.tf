@@ -61,6 +61,10 @@ resource "aws_instance" "bastion_instance" {
 
   #note that above is created from the networking module, so its output will be passed as param to this module
   #user_data = "${data.template_file.user-init.*.rendered[0]}"
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 
