@@ -1,5 +1,8 @@
 #------------------root/main.tf----------------------
-#----------------security module ---------------------
+
+## Lets get current aws account info
+data "aws_caller_identity" "current" {}
+
 module "roles" {
   source             = "./roles"
   bastion_iam_role_name     = "${var.bastion_iam_role_name}"
@@ -10,15 +13,18 @@ module "roles" {
 
 module "security" {
   source = "./security"
+  aws_caller_identity = "${data.aws_caller_identity.current}"
   ssh_port = "${var.ssh_port}"
   tools_vpc_id = "${var.tools_vpc_id}"
-  bastion_tooling_sg_name = "${var.bastion_tooling_sg_name}"
-  jenkins_tooling_sg_name = "${var.jenkins_tooling_sg_name}"
-  jenkins_tooling_lb_sg_name = "${var.jenkins_tooling_lb_sg_name}"
   all_inbound_cidrs = "${var.all_inbound_cidrs}"
   all_outbound_cidrs = "${var.all_outbound_cidrs}"
   http_port = "${var.http_port}"
   https_port = "${var.https_port}"
+
+  bastion_tooling_sg_name = "${var.bastion_tooling_sg_name}"
+  jenkins_tooling_sg_name = "${var.jenkins_tooling_sg_name}"
+  jenkins_tooling_lb_sg_name = "${var.jenkins_tooling_lb_sg_name}"
+  jenkins_role_name = "${module.roles.jenkins_iam_role_name}"
 }
 
 module "computing" {

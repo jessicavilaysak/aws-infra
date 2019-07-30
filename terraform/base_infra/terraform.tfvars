@@ -4,6 +4,7 @@ tags_applicationID = ""
 tags_owner = ""
 tags_powermgmt = ""
 tags_environment = ""
+## This can be used whenever we want to refer to this terraform name
 tags_executedby = "TERRAFORM_HAWKS"
 tags_ldap_authgroup = ""
 tags_ldap_domain = ""
