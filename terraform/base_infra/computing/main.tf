@@ -164,7 +164,7 @@ resource "aws_lb_listener" "jenkins_lb_https_listener" {
 
 ## The resources for ASG and launch config
 resource "aws_autoscaling_group" "jenkins_asg" {
-  name = "jenkins-asg"
+  name_prefix = "jenkins-asg-"
 
   vpc_zone_identifier       = "${var.subnet_ids}"
   availability_zones        = "${data.aws_availability_zones.allzones.names}"

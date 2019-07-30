@@ -23,19 +23,32 @@ resource "aws_iam_role_policy" "bastion_policy" {
 # These resources are used for the jenkins master's IAM role/profile/policy
 ###
 resource "aws_iam_role" "jenkins_iam_role" {
-  name               = "${var.jenkins_iam_role_name}"
+  name_prefix               = "${var.jenkins_iam_role_name}-"
   assume_role_policy = "${file("${path.module}/files/jenkins_assume_role_policy.json")}"
+
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "aws_iam_instance_profile" "jenkins_iam_profile" {                             
-  name  = "${var.jenkins_iam_profile_name}"                         
+  name_prefix  = "${var.jenkins_iam_profile_name}-"                         
   roles = ["${aws_iam_role.jenkins_iam_role.name}"]
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "aws_iam_role_policy" "jenkins_policy" {
-  name = "jenkins_policy"
+  name_prefix = "jenkins_policy-"
   role = "${aws_iam_role.jenkins_iam_role.id}"
   policy = "${file("${path.module}/files/jenkins_role_policy.json")}"
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 
