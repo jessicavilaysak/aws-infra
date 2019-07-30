@@ -14,3 +14,6 @@ variable "bastion_tooling_sg_name" {}
 variable "jenkins_tooling_sg_name" {}
 variable "jenkins_tooling_lb_sg_name" {}
 variable "jenkins_role_name" {}
+variable "ssm_github_priv_key" {}
+variable "ssm_github_pub_key" {}
+variable "tags_executedby" {}

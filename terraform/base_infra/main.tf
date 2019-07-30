@@ -25,6 +25,9 @@ module "security" {
   jenkins_tooling_sg_name = "${var.jenkins_tooling_sg_name}"
   jenkins_tooling_lb_sg_name = "${var.jenkins_tooling_lb_sg_name}"
   jenkins_role_name = "${module.roles.jenkins_iam_role_name}"
+  ssm_github_priv_key = "${var.ssm_github_priv_key}"
+  ssm_github_pub_key = "${var.ssm_github_pub_key}"
+  var.tags_executedby = "${var.tags_executedby}"
 }
 
 module "computing" {
