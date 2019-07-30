@@ -16,6 +16,7 @@ yum update
 wget -O /etc/yum.repos.d/jenkins.repo "${jenkins_repo_download_link}"
 rpm --import "${jenkins_repo_import_link}"
 yum install jenkins -y
+service jenkins start
 
 #############################################################################################################
 ### Set up git connectivity
