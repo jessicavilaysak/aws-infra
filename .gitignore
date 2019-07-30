@@ -1,7 +1,7 @@
 
 ## Ignore mac auto-generated files
 .DS_Store
-
+.idea
 
 ## Ignore any terraform auto-generated files
 .terraform
