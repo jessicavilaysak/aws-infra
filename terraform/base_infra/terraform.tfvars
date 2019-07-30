@@ -72,3 +72,14 @@ jenkins_repo_import_link = "https://pkg.jenkins.io/redhat-stable/jenkins.io.key"
 ssm_github_priv_key = "/github/srv_jess/privatekey"
 ssm_github_pub_key = "/github/srv_jess/publickey"
 jenkins_ssh_folder_path = "/var/lib/jenkins/.ssh"
+
+#----------- Vars for module 'storage'
+jenkins_bucket_name="hawks-jenkins-sync-bucket"
+
+
+
+
+
+
+
+

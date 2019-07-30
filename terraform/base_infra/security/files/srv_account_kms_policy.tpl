@@ -1,5 +1,6 @@
 {
     "Id": "${policy_id}",
+    "Version": "2008-10-17",
     "Statement": [
         {
             "Sid": "Enable IAM User Permissions",
@@ -14,9 +15,7 @@
             "Sid": "Allow access for Key Administrators",
             "Effect": "Allow",
             "Principal": {
-                "AWS": [
-                    "arn:aws:iam::${account_id}:role/${jenkins_role_name}"
-                ]
+                "AWS": "arn:aws:iam::${account_id}:role/${jenkins_role_name}"
             },
             "Action": [
                 "kms:Create*",
@@ -40,9 +39,7 @@
             "Sid": "Allow use of the key",
             "Effect": "Allow",
             "Principal": {
-                "AWS": [
-                    "arn:aws:iam::${account_id}:role/${jenkins_role_name}"
-                ]
+                "AWS": "arn:aws:iam::${account_id}:role/${jenkins_role_name}"
             },
             "Action": [
                 "kms:Encrypt",
@@ -57,9 +54,7 @@
             "Sid": "Allow attachment of persistent resources",
             "Effect": "Allow",
             "Principal": {
-                "AWS": [
-                    "arn:aws:iam::${account_id}:role/${jenkins_role_name}"
-                ]
+                "AWS": "arn:aws:iam::${account_id}:role/${jenkins_role_name}"
             },
             "Action": [
                 "kms:CreateGrant",

@@ -62,8 +62,7 @@ module "computing" {
 
 module "storage" {
   source = "./storage"
-  tags_executedby = "${var.tags_executedby}"
-
+  jenkins_bucket_name = "${var.jenkins_bucket_name}"
   srv_account_kms = "${module.security.srv_account_kms}"
   
 }

@@ -1,7 +1,7 @@
 #------------storage/main.tf---------
 
 resource "aws_s3_bucket" "jenkins_home_bucket" {
-  bucket_prefix = "${var.tags_executedby}"
+  bucket_prefix = "${var.jenkins_bucket_name}-"
   acl = "private"
 
   server_side_encryption_configuration {

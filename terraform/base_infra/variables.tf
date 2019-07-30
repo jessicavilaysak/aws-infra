@@ -50,4 +50,7 @@ variable "ssm_github_priv_key" {}
 variable "ssm_github_pub_key" {}
 variable "jenkins_ssh_folder_path" {}
 
+#----------- Vars for module 'storage'
+variable "jenkins_bucket_name" {}
+
 
