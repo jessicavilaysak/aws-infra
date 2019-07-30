@@ -44,7 +44,7 @@ resource "aws_security_group" "bastion_tooling_sg" {
 
 resource "aws_security_group" "jenkins_tooling_sg" {
   name        = "${var.jenkins_tooling_sg_name}"
-  description = "Private security group for Jenkins master in the tooling vVPCpc"
+  description = "Private security group for Jenkins master in the tooling VPC"
   vpc_id      = "${var.tools_vpc_id}"
 
   #Inbound SSH rules
