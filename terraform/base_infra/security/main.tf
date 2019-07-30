@@ -38,7 +38,7 @@ resource "aws_kms_alias" "srv_account_alias" {
 
 
 
-resource "aws_ssm_parameter" "ssm_git_private_key" {
+resource "aws_ssm_parameter" "git_private_key" {
   name        = "/${var.tags_executedby}/${var.ssm_github_priv_key}"
   description = "Let's use this for a service account for my personal git - its the private key"
   type        = "SecureString"
@@ -46,7 +46,7 @@ resource "aws_ssm_parameter" "ssm_git_private_key" {
   key_id      = "${aws_kms_key.srv_account_kms.key_id}"
 
 }
-resource "aws_ssm_parameter" "ssm_git_public_key" {
+resource "aws_ssm_parameter" "git_public_key" {
   name        = "/${var.tags_executedby}/${var.ssm_github_pub_key}"
   description = "Let's use this for a service account for my personal git - its the public key"
   type        = "SecureString"
