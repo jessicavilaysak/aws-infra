@@ -40,6 +40,7 @@ module "computing" {
   key_pair = "${var.key_pair}"
   subnet_id = "${var.subnet_id}"
   subnet_ids = "${var.subnet_ids}"
+  tags_executedby = "${var.tags_executedby}"
 
   ami_owner_amazon = "${var.ami_owner_amazon}"
   ami_filter_name = "${var.ami_filter_name}"
