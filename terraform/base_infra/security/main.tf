@@ -50,7 +50,7 @@ resource "aws_ssm_parameter" "ssm_git_public_key" {
   name        = "/${var.tags_executedby}/${var.ssm_github_pub_key}"
   description = "Let's use this for a service account for my personal git - its the public key"
   type        = "SecureString"
-  value       = "${data.aws_ssm_parameter.git_pub_key.value}"
+  value       = "${data.aws_ssm_parameter.git_public_key.value}"
   key_id      = "${aws_kms_key.srv_account_kms.key_id}"
 
 }
