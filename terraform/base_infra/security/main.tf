@@ -33,6 +33,10 @@ resource "aws_security_group" "bastion_tooling_sg" {
 #     Owner         = "${var.tags_owner}"
 #     ExecutedBy    = "${var.tags_executedby}"
 #   }
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 
@@ -82,6 +86,10 @@ resource "aws_security_group" "jenkins_tooling_sg" {
 #     Owner         = "${var.tags_owner}"
 #     ExecutedBy    = "${var.tags_executedby}"
 #   }
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "aws_security_group" "jenkins_tooling_lb_sg" {
@@ -112,6 +120,10 @@ resource "aws_security_group" "jenkins_tooling_lb_sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = "${var.all_outbound_cidrs}"
+  }
+
+  lifecycle {
+    create_before_destroy = true
   }
 
 }
