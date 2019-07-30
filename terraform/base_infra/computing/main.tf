@@ -6,6 +6,12 @@ data "template_file" "jenkins_launch_config_userdata" {
     jenkins_repo_download_link = "${var.jenkins_repo_download_link}"
     jenkins_repo_import_link = "${var.jenkins_repo_import_link}"
     region = "${var.region}"
+
+    ###
+    # NOTE: the vars 'ssm_github_priv_key' and 'ssm_github_pub_key' start with a slash 
+    #   bc they are SSM params.
+    #   This means when concatenating to create a new SSM param we do not need a slash in between the vars.
+    ###
     ssm_github_priv_key = "/${var.tags_executedby}${var.ssm_github_priv_key}"
     ssm_github_pub_key = "/${var.tags_executedby}${var.ssm_github_pub_key}"
     jenkins_ssh_folder_path = "${var.jenkins_ssh_folder_path}"

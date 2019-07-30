@@ -12,3 +12,7 @@ output "jenkins_lb_sg_id"{
   value = "${aws_security_group.jenkins_tooling_lb_sg.id}"
 }
 
+output "srv_account_kms"{
+  value = "${aws_kms_key.srv_account_kms}"
+}
+

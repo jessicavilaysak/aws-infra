@@ -60,6 +60,14 @@ module "computing" {
   jenkins_ssh_folder_path = "${var.jenkins_ssh_folder_path}"
 }
 
+module "storage" {
+  source = "./storage"
+  tags_executedby = "${var.tags_executedby}"
+
+  srv_account_kms = "${module.security.srv_account_kms}"
+  
+}
+
 
 provider "aws" {
   region = "ap-southeast-2"
