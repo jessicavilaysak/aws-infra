@@ -8,8 +8,8 @@ module "roles" {
   jenkins_iam_profile_name = "${var.jenkins_iam_profile_name}"
 }
 
-module "security_groups" {
-  source = "./security_groups"
+module "security" {
+  source = "./security"
   ssh_port = "${var.ssh_port}"
   tools_vpc_id = "${var.tools_vpc_id}"
   bastion_tooling_sg_name = "${var.bastion_tooling_sg_name}"
@@ -29,18 +29,18 @@ module "computing" {
   ami_filter_pattern_bastion = "${var.ami_filter_pattern_bastion}"
   bastion_iam_profile = "${module.roles.bastion_iam_profile_id}"
   bastion_instance_type = "${var.bastion_instance_type}"
-  bastion_instance_sg = "${module.security_groups.bastion_sg_id}"
+  bastion_instance_sg = "${module.security.bastion_sg_id}"
   key_pair = "${var.key_pair}"
   subnet_id = "${var.subnet_id}"
   subnet_ids = "${var.subnet_ids}"
   ami_owner_amazon = "${var.ami_owner_amazon}"
-  jenkins_lb_sg = "${module.security_groups.jenkins_lb_sg_id}"
+  jenkins_lb_sg = "${module.security.jenkins_lb_sg_id}"
   https_port = "${var.https_port}"
   http_port = "${var.http_port}"
   lb_cert_arn = "${var.lb_cert_arn}"
   jenkins_instance_type = "${var.jenkins_instance_type}"
   jenkins_iam_profile = "${module.roles.jenkins_iam_profile_id}"
-  jenkins_instance_sg = "${module.security_groups.jenkins_sg_id}"
+  jenkins_instance_sg = "${module.security.jenkins_sg_id}"
   jenkins_repo_download_link = "${var.jenkins_repo_download_link}"
   jenkins_repo_import_link = "${var.jenkins_repo_import_link}"
 }
