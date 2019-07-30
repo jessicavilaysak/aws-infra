@@ -63,7 +63,7 @@ module "computing" {
 module "storage" {
   source = "./storage"
   jenkins_bucket_name = "${var.jenkins_bucket_name}"
-  srv_account_kms = "${module.security.srv_account_kms}"
+  srv_account_kms = "${module.security.srv_account_kms_alias}"
   
 }
 

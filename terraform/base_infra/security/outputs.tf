@@ -16,3 +16,7 @@ output "srv_account_kms"{
   value = "${aws_kms_key.srv_account_kms}"
 }
 
+output "srv_account_kms_alias"{
+  value = "${aws_kms_alias.srv_account_alias}"
+}
+
